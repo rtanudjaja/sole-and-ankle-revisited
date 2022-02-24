@@ -1,8 +1,9 @@
 import React from 'react';
 import styled from 'styled-components/macro';
 
-import { COLORS, WEIGHTS } from '../../constants';
+import { COLORS, WEIGHTS, QUERIES } from '../../constants';
 import Logo from '../Logo';
+import Icon from '../Icon';
 import SuperHeader from '../SuperHeader';
 import MobileMenu from '../MobileMenu';
 
@@ -31,6 +32,16 @@ const Header = () => {
         </Nav>
         <Side />
       </MainHeader>
+      <AlternateHeader>
+        <Side>
+          <Logo />
+        </Side>
+        <Nav>
+          <Icon id="shopping-bag" strokeWidth={1} />
+          <Icon id="search" strokeWidth={1} />
+          <Icon id="menu" strokeWidth={1} />
+        </Nav>
+      </AlternateHeader>
 
       <MobileMenu
         isOpen={showMobileMenu}
@@ -39,19 +50,47 @@ const Header = () => {
     </header>
   );
 };
-
+ 
 const MainHeader = styled.div`
   display: flex;
   align-items: baseline;
   padding: 18px 32px;
   height: 72px;
   border-bottom: 1px solid ${COLORS.gray[300]};
+
+  @media ${QUERIES.laptopAndDown} {
+    display: none;
+  }
+`;
+
+const AlternateHeader = styled.div`
+  display: none;
+  align-items: baseline;
+  justify-content: flex-end;
+  padding: 18px 32px;
+  height: 72px;
+  border-bottom: 1px solid ${COLORS.gray[300]};
+
+  @media ${QUERIES.laptopAndDown} {
+    display: flex;
+  }
 `;
 
 const Nav = styled.nav`
   display: flex;
   gap: 48px;
   margin: 0px 48px;
+  @media ${QUERIES.laptopAndDown} {
+    margin: 0px;
+    display: flex;
+    gap: 48px;
+  }
+  @media ${QUERIES.tabletAndDown} {
+    gap: 34px;
+  }
+  @media ${QUERIES.mobileAndDown} {
+    gap: 20px
+  }
 `;
 
 const Side = styled.div`
