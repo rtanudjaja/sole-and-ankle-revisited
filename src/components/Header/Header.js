@@ -63,12 +63,12 @@ const MainHeader = styled.div`
   padding: 18px 32px;
   height: 72px;
   border-bottom: 1px solid ${COLORS.gray[300]};
-  @media ${QUERIES.tabletAndSmaller} {
+  @media ${QUERIES.tabletAndDown} {
     justify-content: space-between;
     align-items: center;
     border-top: 4px solid ${COLORS.gray[900]};
   }
-  @media ${QUERIES.phoneAndSmaller} {
+  @media ${QUERIES.phoneAndDown} {
     padding-left: 16px;
     padding-right: 16px;
   }
@@ -78,25 +78,25 @@ const DesktopNav = styled.nav`
   display: flex;
   gap: 48px;
   margin: 0px 48px;
-  @media ${QUERIES.tabletAndSmaller} {
+  @media ${QUERIES.tabletAndDown} {
     display: none;
   }
 `;
 
 const MobileActions = styled.div`
   display: none;
-  @media ${QUERIES.tabletAndSmaller} {
+  @media ${QUERIES.tabletAndDown} {
     gap: 32px;
     display: flex;
   }
-  @media ${QUERIES.phoneAndSmaller} {
+  @media ${QUERIES.phoneAndDown} {
     gap: 16px;
   }
 `;
 
 const LogoWrapper = styled.div`
   flex: 1;
-  @media ${QUERIES.tabletAndSmaller} {
+  @media ${QUERIES.tabletAndDown} {
     flex: revert;
   }
 `;
@@ -107,7 +107,7 @@ const ShoppingBagButton = styled(UnstyledButton)`
 
 const Filler = styled.div`
   flex: 1;
-  @media ${QUERIES.tabletAndSmaller} {
+  @media ${QUERIES.tabletAndDown} {
     display: none;
   }
 `;

@@ -30,7 +30,7 @@ const Wrapper = styled.div`
   padding-left: 32px;
   padding-right: 32px;
 
-  @media ${QUERIES.tabletAndSmaller} {
+  @media ${QUERIES.tabletAndDown} {
     display: none;
   }
 `;
