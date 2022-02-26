@@ -30,14 +30,16 @@ const ShoeIndex = ({ sortId, setSortId }) => {
             </MobileBreadcrumbs>
             <Title>Running</Title>
           </div>
-          <Select
-            label="Sort"
-            value={sortId}
-            onChange={(ev) => setSortId(ev.target.value)}
-          >
-            <option value="newest">Newest Releases</option>
-            <option value="price">Price</option>
-          </Select>
+          <SortFilterWrapper>
+            <Select
+              label="Sort"
+              value={sortId}
+              onChange={(ev) => setSortId(ev.target.value)}
+            >
+              <option value="newest">Newest Releases</option>
+              <option value="price">Price</option>
+            </Select>
+          </SortFilterWrapper>
         </Header>
         <Spacer size={32} />
         <ShoeGrid />
@@ -98,6 +100,12 @@ const MobileBreadcrumbs = styled.div`
 
   @media ${QUERIES.tabletAndSmaller} {
     display: revert;
+  }
+`
+
+const SortFilterWrapper = styled.div`
+  @media ${QUERIES.phoneAndSmaller} {
+    display: none;
   }
 `
 
