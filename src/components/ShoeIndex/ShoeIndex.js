@@ -43,7 +43,7 @@ const ShoeIndex = ({ sortId, setSortId }) => {
 };
 
 const Filler = styled(Spacer)`
-  @media ${QUERIES.tabletAndDown} {
+  @media ${QUERIES.tabletAndSmaller} {
     display: none;
   }
 `;
@@ -54,7 +54,7 @@ const Wrapper = styled.div`
   align-items: baseline;
   gap: 32px;
 
-  @media ${QUERIES.tabletAndDown} {
+  @media ${QUERIES.tabletAndSmaller} {
     flex-direction: column-reverse;
     align-items: flex-start;
     justify-content: flex-start;
@@ -64,7 +64,7 @@ const Wrapper = styled.div`
 
 const LeftColumn = styled.div`
   flex-basis: 248px;
-  @media ${QUERIES.tabletAndDown} {
+  @media ${QUERIES.tabletAndSmaller} {
     flex-basis: 0px;
   }
 `;

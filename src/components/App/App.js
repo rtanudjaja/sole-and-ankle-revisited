@@ -22,7 +22,7 @@ const App = () => {
 const Main = styled.main`
   padding: 64px 32px;
 
-  @media ${QUERIES.phoneAndDown} {
+  @media ${QUERIES.phoneAndSmaller} {
     padding: 48px 32px;
   }
 `;

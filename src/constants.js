@@ -21,7 +21,7 @@ const BREAKPOINTS = {
   mobileMin: 600,
 }
 export const QUERIES = {
-  'mobileAndDown': `(max-width: ${BREAKPOINTS.mobileMin / 16}rem)`,
-  'laptopAndDown': `(max-width: ${BREAKPOINTS.laptopMin / 16}rem)`,
-  'tabletAndDown': `(max-width: ${BREAKPOINTS.tabletMin / 16}rem)`,
+  'mobileAndSmaller': `(max-width: ${BREAKPOINTS.mobileMin / 16}rem)`,
+  'laptopAndSmaller': `(max-width: ${BREAKPOINTS.laptopMin / 16}rem)`,
+  'tabletAndSmaller': `(max-width: ${BREAKPOINTS.tabletMin / 16}rem)`,
 }
